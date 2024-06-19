@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ResultCard.css'
 
-const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, sd, speed, types }) => {
+const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, sd, speed, type }) => {
   function capitalizeFirstLetter(word) {
     if (word)
     return word[0].toUpperCase() + word.slice(1).toLowerCase()
@@ -15,19 +15,24 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
           <div className="title">
                 {pokemonName}
           </div>
+          <div className="type-list">
+            { 
+              type?.map((type, index) => {
+                return <div key={type.type.name} className="type" id={type.type.name}>{type.type.name}</div>
+              })
+            }
+          </div>
         </div>
-
         <div className="card-image">
             <img src={image} alt="" />
         </div>
       </div>
+
+
       <div className="info">
         <div className="header"> {/* Header */}
           <div className="title">
             About
-          </div>
-          <div className="types">
-            
           </div>
         </div>
         <div className="content">
@@ -47,7 +52,7 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
                 Health: {health}
               </span>
               <div className="bar" style={{width: `100%`}}>
-                <div className="progress" style={{width: `${health}%`}}></div>
+                <div className="progress" style={{width: `${Math.max(0, Math.min(health, 100))}%`}}></div>
               </div>
             </div>
             <div className="stat" id="attack">
@@ -56,7 +61,7 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
                 Attack: {attack}
               </span>
               <div className="bar" style={{width: `100%`}}>
-                <div className="progress" style={{width: `${attack}%`}}></div>
+                <div className="progress" style={{width: `${Math.max(0, Math.min(attack, 100))}%`}}></div>
               </div>
             </div>
             <div className="stat" id="defense">
@@ -65,7 +70,7 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
                 Defense: {defense}
               </span>
               <div className="bar" style={{width: `100%`}}>
-              <div className="progress" style={{width: `${defense}%`}}></div>
+              <div className="progress" style={{width: `${Math.max(0, Math.min(defense, 100))}%`}}></div>
               </div>
             </div>
             <div className="stat" id="special-attack">
@@ -74,13 +79,16 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
                 Special Attack: {sp}
               </span>
                 <div className="bar" style={{width: `100%`}}>
-                <div className="progress" style={{width: `${sp}%`}}></div>
+                <div className="progress" style={{width: `${Math.max(0, Math.min(sp, 100))}%`}}></div>
               </div>
               </div>
             <div className="stat" id="special-defense">
-              Special Defense: {sd}
+              <span>
+                <img src="https://img.icons8.com/?size=100&id=79928&format=png&color=FC405C" alt="" />
+                Special Defense: {sd}
+              </span>
                 <div className="bar" style={{width: `100%`}}>
-                <div className="progress" style={{width: `${sd}%`}}></div>
+                <div className="progress" style={{width: `${Math.max(0, Math.min(sd, 100))}%`}}></div>
               </div>
               </div>
             <div className="stat" id="speed">
@@ -89,7 +97,7 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
                 Speed: {speed}
               </span>
               <div className="bar" style={{width: `100%`}}>
-              <div className="progress" style={{width: `${speed}%`}}></div>
+              <div className="progress" style={{width: `${Math.max(0, Math.min(speed, 100))}%`}}></div>
               </div>
               </div>
           </div>

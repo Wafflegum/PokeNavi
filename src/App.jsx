@@ -35,6 +35,7 @@ function App() {
         sp={pokemon.stats[3].base_stat}
         sd={pokemon.stats[4].base_stat}
         speed={pokemon.stats[5].base_stat}
+        type={pokemon.types}
       /> : <ResultCard />}
     </main>
   )

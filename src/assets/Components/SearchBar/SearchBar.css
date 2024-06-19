@@ -13,14 +13,14 @@ form {
     height: 3em;
     width: 80vh;
 
-    border-radius: 15px;
+    border-radius: 2vh;
     outline: 0;
     border: 0;
 
     padding: 1em;
     box-sizing: border-box;
 
-    background: transparent;
+    background: #1b1b1b;
 }
 
 #search:focus {
@@ -32,12 +32,17 @@ form {
 }
 
 #searchBtn img {
-    width: 25px;
+    width: 1.8em;
     height: auto;
 }
 
 #searchBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: fit-content;
+
     background: none;
     outline: 0;
     border: 0;
