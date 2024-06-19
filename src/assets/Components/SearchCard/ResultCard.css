@@ -1,0 +1,109 @@
+.vertical-divider {
+    border: 1px solid #FC405C;
+    height: 2em;
+    width: fit-content;
+}
+
+.card-container {
+    width: 80%;
+    height: 80%;
+
+    box-sizing: border-box;
+    padding: 2em;
+
+    border: 1px solid white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.card-image img {
+    width: 25em;
+    height: 25em;
+}
+
+.header {
+    padding-bottom: 10px;
+
+    font-size: 3vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#physical-stats {
+    width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 1em;
+
+    background: #1b1b1b;
+    
+    gap: 1em;
+}
+
+#physical-stats img {
+    width: 20px;
+    padding-right: 5px;
+}
+
+#height, #weight {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+#other-stats {
+    background-color: #1b1b1b;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    border-radius: 1em;
+}
+
+.stat {
+    padding: 1em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.stat span {
+    display: flex;
+    align-items: center;
+}
+
+.stat span img {
+    width: 1.5em;
+}
+
+.bar {
+    margin-top: 1em;
+    background-color: rgb(90, 90, 90);
+    height: 10px;
+}
+
+.progress {
+    background-color: #FC405C;
+    height: 10px;
+    border-radius: 1em;
+}
+
+
+

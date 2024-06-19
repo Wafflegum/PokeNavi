@@ -1,0 +1,44 @@
+* {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+
+}
+form {
+    padding: 2em;
+    display: flex;
+
+}
+#search {
+    height: 3em;
+    width: 80vh;
+
+    border-radius: 15px;
+    outline: 0;
+    border: 0;
+
+    padding: 1em;
+    box-sizing: border-box;
+
+    background: transparent;
+}
+
+#search:focus {
+    border: 2px solid #FC405C;
+}
+
+#searchBtn:hover {
+    cursor: pointer;
+}
+
+#searchBtn img {
+    width: 25px;
+    height: auto;
+}
+
+#searchBtn {
+    width: fit-content;
+    background: none;
+    outline: 0;
+    border: 0;
+}
