@@ -15,11 +15,11 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
     <div className="card-container">
 
       <div className="preview">
-      <div className="decorator" id={decoratorColorID ? decoratorColorID : "electric"}></div> {/*// Applying the style of whatever decorator color got */}
+      <div className="decorator" id={decoratorColorID ? decoratorColorID : "psychic"}></div> {/*// Applying the style of whatever decorator color got */}
 
         <div className="header">
 
-          <div className="title">
+          <div className="title" id={decoratorColorID ? decoratorColorID : "psychic"}>
                 {pokemonName}
           </div>
           <div className="type-list"> {/* Lists out all the type list provided from props. All poke types have a styling applied by their ID.*/}
