@@ -6,7 +6,6 @@ import SearchBar from './assets/Components/SearchBar/SearchBar'
 
 function App() {
   const [pokemon, setPokemon] = useState([])
-  FetchPokemon()
 
   async function FetchPokemon(name="pikachu") { // This fetches the pokemon in the PokeAPI
     try {

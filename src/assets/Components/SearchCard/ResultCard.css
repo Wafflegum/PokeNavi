@@ -17,8 +17,26 @@
     display: flex;
     /* grid-template-columns: repeat(2, 1fr); */
     gap: 5%;
-}
 
+    overflow: hidden;
+    position: relative
+}
+.decorator {
+    margin: -2em;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: none;
+    z-index: -1;
+/* 
+    left: -15em;
+    rotate: 45deg; */
+
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+
+    border-radius: 3vh 0 0 3vh;
+    box-sizing: border-box;
+}
 .preview {
     flex: 1 1 auto;
     display: flex;
@@ -43,6 +61,10 @@
     padding-bottom: 10px;
 
     font-size: 3vh;
+}
+
+.title{
+    mix-blend-mode: difference;
 }
 
 .content {
@@ -124,31 +146,40 @@
     gap: 0.25em;
 }
 .type {
-    font-size: 2vh;
     width: fit-content;
     background: black;
 
     padding: 1vh;
     border-radius: 1vh;
+
+    font-size: 2vh;
+    font-weight: 600;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 #normal {
     background: #A8A77A;
+    color: #2D402D;
 }
 #fire {
-    background: #EE8130
+    background: #EE8130;
+    color: #681A02;
 }
 #water {
-    background: #6390F0
+    background: #5580dd;
+    color: #ffffff;
 }
 #electric {
-    background: #F7D02C
+    background: #F7D02C;
+    color: #744e15;
 }
 #grass {
-    background: #7AC74C
+    background: #7AC74C;
+    color: #0C5221;
 }
 #ice {
-    background: #96D9D6
+    background: #96D9D6;
+    color: #3C5B72;
 }
 #fighting {
     background: #C22E28
