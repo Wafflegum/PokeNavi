@@ -26,7 +26,8 @@ function App() {
       <SearchBar fetch={FetchPokemon} />
       {pokemon.name ? <ResultCard 
         name={pokemon.name} 
-        image={pokemon.sprites.other[`showdown`].front_default} 
+        image={pokemon.sprites.other[`showdown`].front_default}
+        image2={pokemon.sprites.other[`official-artwork`].front_default}
         height={pokemon.height * 10}
         weight={pokemon.weight / 10}
         health={pokemon.stats[0].base_stat}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ResultCard.css'
 
-const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, sd, speed, type }) => {
+const ResultCard = ({ name, image, image2, height, weight, health, attack, defense, sp, sd, speed, type }) => {
   function toTitleCase(word) {
     if (word)
     return word[0].toUpperCase() + word.slice(1).toLowerCase()
@@ -15,11 +15,11 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
     <div className="card-container">
 
       <div className="preview">
-      <div className="decorator" id={decoratorColorID ? decoratorColorID : "psychic"}></div> {/*// Applying the style of whatever decorator color got */}
+      <div className="decorator" id={decoratorColorID ? decoratorColorID : "fighting"} style={name ? {clipPath: "polygon(100% 0, 0 0, 0 100%, 0 100%)"} : {clipPath: "polygon(100% 0, 0 0%, 0 100%, 100% 100%)"}}></div> {/* Applying the style of whatever decorator color got */}
 
         <div className="header">
 
-          <div className="title" id={decoratorColorID ? decoratorColorID : "psychic"}>
+          <div className="title" id={decoratorColorID ? decoratorColorID : "fighting"}>
                 {pokemonName}
           </div>
           <div className="type-list"> {/* Lists out all the type list provided from props. All poke types have a styling applied by their ID.*/}
@@ -35,13 +35,20 @@ const ResultCard = ({ name, image, height, weight, health, attack, defense, sp, 
         </div>
       </div>
 
-      <div className="info">
+      <span className='pokeball' style={name ? {transform: "translate(-5%, -32.25%)", scale: "1.5", opacity: "0.5"} : {transform: "translate(-49.5%, -49.5%)", scale: "1", opacity: "1"}}>
+        <img src="./pokeball.svg" alt="" />
+      </span>
+      <span className='pokemon-bg' style={name ? {transform: "translate(20%, -10%)", scale: "3", opacity: "0.2"} : {opacity: "0"}}>
+        <img src={image2} alt="" />
+      </span>
+
+      <div id="info">
         <div className="header"> {/* Header */}
-          <div className="title">
+          <div className="title" style={name ? {opacity: "1", transform: "translateY(0px)"} : {opacity: "0", transform: "translateY(50px)"}}>
             About
           </div>
         </div>
-        <div className="content">
+        <div className="content" style={name ? {opacity: "1", transform: "translateY(0px)"} : {opacity: "0", transform: "translateY(50px)"}}>
 
           <div id="physical-stats">
             <div id="height">
