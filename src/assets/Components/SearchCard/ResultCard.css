@@ -115,7 +115,7 @@
     box-sizing: border-box;
     border-radius: 1em;
 
-    background: #1b1b1b;
+    background: rgba(22, 22, 22, 0.95);
     
     gap: 1em;
 }
@@ -132,7 +132,7 @@
 }
 
 #other-stats {
-    background-color: #1b1b1b;
+    background-color: rgba(22, 22, 22, 0.95);
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
